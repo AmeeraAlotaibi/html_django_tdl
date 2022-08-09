@@ -8,6 +8,7 @@ def get_ice_cream(request, ice_cream_id):
         "ice_cream": {
             "name": ice_cream.name,
             "shop": ice_cream.shop,
+            "flavors": ice_cream.flavors,
             "stock": ice_cream.stock
         }
     }
@@ -16,10 +17,6 @@ def get_ice_cream(request, ice_cream_id):
 def get_all_ice_creams(request):
     ice_creams = IceCream.objects.all()
     context = {
-        "ice_cream": {
-            "name": ice_creams.name,
-            "shop": ice_creams.shop,
-            "stock": ice_creams.stock
-        }
+        "ice_creams": ice_creams
     }
     return render(request, "ice_cream_list.html", context)

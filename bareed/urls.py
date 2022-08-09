@@ -19,6 +19,6 @@ from shops.views import get_ice_cream, get_all_ice_creams
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("ice-cream/<int:ice_cream_id>/", get_ice_cream, name="ice-cream"),
-    path("ice-creams", get_all_ice_creams, name="all-ice-creams"),
+    path("ice-cream/<int:ice_cream_id>/", get_ice_cream, name="ice_cream_details"),
+    path("ice-cream-list/", get_all_ice_creams, name="ice_cream_list"),
 ]
