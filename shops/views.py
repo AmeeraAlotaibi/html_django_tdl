@@ -17,6 +17,6 @@ def get_ice_cream(request, ice_cream_id):
 def get_all_ice_creams(request):
     ice_creams = IceCream.objects.all()
     context = {
-        "ice_creams": ice_creams
+        "ice_creams": ice_creams,
     }
     return render(request, "ice_cream_list.html", context)
